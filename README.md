@@ -1,21 +1,49 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/o69wxeYp)
-# Project Instructions
-Follow the instructions here: https://vuxcode.netlify.app/new/pr1/lessons/major-project-brief/
+# GlossyHelper
 
-REMEMBER TO "COMMIT" YOUR CHANGES REGULARLY TO SHOW HOW YOU HAVE BUILT THIS PROJECT! 
 
-The final program is not the goal! The aim of the project is to show how you have developed your program, the steps you have taken and the problems you have solved!
+<p align="center">
+  <img src="logo.png" alt="GlossyHelper Logo" width="200">
+</p>
 
-# Project Notes
 
-> You can use this section of the file to keep notes about your project as you work on it.
 
-# Project Summary
+## Simple offline glossary app built with JavaScript
 
-> Before the final submission date you should include a "PROJECT SUMMARY" in this section here. 
+When I started this project, I had big expectations. I wanted to build something that could store words, test translations, and maybe even save progress. Pretty soon I realised it was better to just focus on getting small things to work first, one step at a time.
 
-# User Guide
+GlossyHelper is a small offline glossary app I’m building in JavaScript as part of my programming and English studies.
+It’s not fancy or big, just something I’m creating to learn more about coding and build something useful at the same time.
 
-> Write a clear user guide for how someone should use your program.
 
-test  ctrl + s
+## Features (so far)
+
+Add words in Swedish and English
+
+Test yourself in both directions
+
+See feedback instantly: “Correct!” or the right answer
+
+Simple pop-ups and alerts for interaction
+
+Keeps running in a small loop until you choose to quit
+
+It’s built only with the basics: prompts for input, alerts for feedback, and text written directly to the page. It’s not pretty, but it works, almost.
+
+<p align="center">
+  <img src="main-menu.png" alt="Main menu" width="600">
+</p>
+
+
+## Problems at the moment
+It can't display the wordlist.
+
+
+## Planned ideas
+
+Cleaner layout and design
+
+Handling synonyms and saving data
+
+Import and export of word lists
+
+*For now, I’m just happy that it finally runs without (to much) errors and does most of the things i want.*
