@@ -1,43 +1,26 @@
-Guide for vs code and github // Set up github and Vs Code 🧭 VS Code + GitHub Classroom Setup Guide 
+ 🧭 VS Code + GitHub Classroom Setup Guide 
+
+
+Hello and welcome!
 
 
 ⚠️ Step 0 — Before You Start 👉 Make sure you have accepted the Classroom link from Collin before doing anything else. This creates your own private assignment repository inside the school’s GitHub organization. 
 
-If you skip this step, nothing will connect correctly later! “How to connect VS Code to GitHub on Windows” 🎯 Goal Show how to: Install Git on Windows Sign in to GitHub from VS Code Clone or upload a project No terminal commands required at all.
+If you skip this step, nothing will connect correctly later!
 
 
-
-“How to connect VS Code to GitHub on Windows”
-🎯 Goal
-
-Show how to:
-
-Install Git on Windows
-
-Sign in to GitHub from VS Code
-
-Clone or upload a project
-
-No terminal commands required at all.
+ “How to connect VS Code to GitHub on Windows” 🎯 
 
 
-https://github.com/git-guides/install-git
+Goal Show how to: Install Git on Windows/mac/linux
 
-or just google install git
+ Sign in to GitHub from VS Code Clone or upload a project No terminal commands required at all.
 
+ Start with Visual Studio Desktop
 
-Install Git on Windows through Visual Studio Code
+ https://code.visualstudio.com/download
 
-GitHub integration is provided through the GitHub Pull Requests and Issues extension.
-To get started with the GitHub in VS Code, you'll need to create an account and install the GitHub Pull Requests and Issues extension.
-Once you've installed the GitHub Pull Requests and Issues extension, you'll need to sign in. Follow the prompts to authenticate with GitHub and return to VS Code.
-
-If you dont know how to install extenssions 
-
-https://code.visualstudio.com/docs/getstarted/extensions
-
-
-🪄 Step 1 — Install Git
+ 🪄 Step 1 — Install Git
 
 Narration:
 
@@ -52,6 +35,22 @@ Run the installer → keep every default option.
 When finished, click Finish and close the installer.
 
 Restart VS Code so it recognizes Git.
+
+
+https://github.com/git-guides/install-git
+
+
+Install Git on Windows through Visual Studio Code
+
+GitHub integration is provided through the GitHub Pull Requests and Issues extension.
+To get started with the GitHub in VS Code, you'll need to create an account and install the GitHub Pull Requests and Issues extension.
+Once you've installed the GitHub Pull Requests and Issues extension, you'll need to sign in. Follow the prompts to authenticate with GitHub and return to VS Code.
+
+Note: You can perform actions like, you can search for and clone a repository from GitHub using the Git: Clone command in the Command Palette (Ctrl+Shift+P) or by using the Clone Repository button in the Source Control view (available when you have no folder open).
+Learn more here https://code.visualstudio.com/docs/sourcecontrol/github
+
+
+And one more link https://code.visualstudio.com/docs/getstarted/extensions
 
 
 
@@ -71,6 +70,11 @@ Choose ‘Sign in to GitHub’.
 A browser window opens → click Authorize Visual Studio Code.
 
 Return to VS Code — your GitHub username now appears in the corner. ✅
+
+If it is the first time you log on, you need to do 2fa.
+
+
+
 
 
 🗂️ Step 3 — Open or clone your project
@@ -100,6 +104,13 @@ Open that folder in VS Code.
 Add some files to it.
 
 
+Now, your repo should be downloaded to that folder you created. 
+
+
+
+
+
+
 
 💾 Step 4 — Publish to GitHub
 
@@ -120,6 +131,12 @@ VS Code creates the repo on GitHub and pushes your files automatically. 🎉
 (You’ll see the confirmation link appear in the Output panel — click to open it in GitHub.)
 
 
+I just made a change in my index and created/changed the guide. Lets save ctrl + s 
+
+
+
+
+
 🧠 Step 5 — Edit, Save & Sync
 
 Narration:
@@ -135,36 +152,3 @@ Source Control → click + to stage changes.
 Write a commit message → click Commit.
 
 Then click Sync Changes (🔁) to upload to GitHub.
-
-Now lets sync!
- It is not working... lets debug
-
- Chat gpt tells me to delete the folder we created and go back to step 3 and clone the school repo. 
-
-
-
- Delete your local classroom folder
-Close VS Code. In your files, delete the local folder pr1-project-pokeballstore (just the local copy).
-
-Re-clone the Classroom repo
-
-Open VS Code → Ctrl+Shift+P → Git: Clone
-
-Paste your Classroom URL:
-
-
-Choose a location → when prompted, click Open.
-
-Put your files back in
-Copy your project files into this cloned folder.
-⚠️ Do not copy any hidden .git from anywhere—just your code/files.
-
-Commit
-Open Source Control (branch icon) → click + (Stage All) → write a message “Initial upload” → Commit.
-
-Sync (upload)
-Click Sync Changes (⇅) or Push.
-If VS Code asks to “Publish / set upstream”, click Yes.
-
-Verify
-Refresh the repo page on GitHub (the Classroom one). You should see your commit.
