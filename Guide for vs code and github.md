@@ -119,3 +119,18 @@ Pick a name → choose Public or Private → click ‘Publish Repository’.
 VS Code creates the repo on GitHub and pushes your files automatically. 🎉
 
 (You’ll see the confirmation link appear in the Output panel — click to open it in GitHub.)
+
+
+Make sure that your index files where you have your project is saved in the correct folder. 
+
+everything that you do in this folder, add something or delete, when you commit, it will change on github. 
+
+For ex. If you were to add a picture in the folder, that picture would uppload to your Repo. 
+
+Hm, we will see if i did something wrong. Hopfully you have followed this guide and everything works for you. I will try to debug... 
+
+This commit does not belong to any branch on this repository, and may belong to a fork outside of the repository.
+
+The problem seams to be that i already have one repo connected... 
+
+
