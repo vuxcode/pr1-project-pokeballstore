@@ -1,17 +1,11 @@
-Guide for vs code and github
+Guide for vs code and github // Set up github and Vs Code 🧭 VS Code + GitHub Classroom Setup Guide 
 
 
+⚠️ Step 0 — Before You Start 👉 Make sure you have accepted the Classroom link from Collin before doing anything else. This creates your own private assignment repository inside the school’s GitHub organization. 
+
+If you skip this step, nothing will connect correctly later! “How to connect VS Code to GitHub on Windows” 🎯 Goal Show how to: Install Git on Windows Sign in to GitHub from VS Code Clone or upload a project No terminal commands required at all.
 
 
-
-// Set up github and Vs Code
-
-🧭 VS Code + GitHub Classroom Setup Guide
-⚠️ Step 0 — Before You Start
-
-👉 Make sure you have accepted the Classroom link from Collin before doing anything else.
-This creates your own private assignment repository inside the school’s GitHub organization.
-If you skip this step, nothing will connect correctly later!
 
 “How to connect VS Code to GitHub on Windows”
 🎯 Goal
@@ -25,6 +19,23 @@ Sign in to GitHub from VS Code
 Clone or upload a project
 
 No terminal commands required at all.
+
+
+https://github.com/git-guides/install-git
+
+or just google install git
+
+
+Install Git on Windows through Visual Studio Code
+
+GitHub integration is provided through the GitHub Pull Requests and Issues extension.
+To get started with the GitHub in VS Code, you'll need to create an account and install the GitHub Pull Requests and Issues extension.
+Once you've installed the GitHub Pull Requests and Issues extension, you'll need to sign in. Follow the prompts to authenticate with GitHub and return to VS Code.
+
+If you dont know how to install extenssions 
+
+https://code.visualstudio.com/docs/getstarted/extensions
+
 
 🪄 Step 1 — Install Git
 
@@ -41,12 +52,6 @@ Run the installer → keep every default option.
 When finished, click Finish and close the installer.
 
 Restart VS Code so it recognizes Git.
-
-Install Git on Windows through Visual Studio Code. That is the best way to do it. If you do not understand Pull Requests and Issues extension. Just google it or use AI to help you with that. I can help you if you want!
-
-Pause and install!!
-
-
 
 
 
@@ -66,12 +71,6 @@ Choose ‘Sign in to GitHub’.
 A browser window opens → click Authorize Visual Studio Code.
 
 Return to VS Code — your GitHub username now appears in the corner. ✅
-
-
-
-
-
-
 
 
 🗂️ Step 3 — Open or clone your project
@@ -121,16 +120,21 @@ VS Code creates the repo on GitHub and pushes your files automatically. 🎉
 (You’ll see the confirmation link appear in the Output panel — click to open it in GitHub.)
 
 
-Make sure that your index files where you have your project is saved in the correct folder. 
+🧠 Step 5 — Edit, Save & Sync
 
-everything that you do in this folder, add something or delete, when you commit, it will change on github. 
+Narration:
 
-For ex. If you were to add a picture in the folder, that picture would uppload to your Repo. 
+“Every time you change something, commit and sync it to keep GitHub up to date.”
 
-Hm, we will see if i did something wrong. Hopfully you have followed this guide and everything works for you. I will try to debug... 
+Visuals:
 
-This commit does not belong to any branch on this repository, and may belong to a fork outside of the repository.
+Make a small edit to any file.
 
-The problem seams to be that i already have one repo connected... 
+Source Control → click + to stage changes.
+
+Write a commit message → click Commit.
+
+Then click Sync Changes (🔁) to upload to GitHub.
+
 
 
