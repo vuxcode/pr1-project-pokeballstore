@@ -46,9 +46,11 @@ Handling synonyms and saving data
 
 Import and export of word lists
 
+add a section for statistics and progress
+
 *For now, I’m just happy that it finally runs without (to much) errors and does most of the things i want.*
 
 
 ## Side project
 
-I made a guide 
+I created a step-by-step guide for implementing GitHub commits in Visual Studio Desktop.
