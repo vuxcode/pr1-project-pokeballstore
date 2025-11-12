@@ -1,5 +1,6 @@
  🧭 VS Code + GitHub Classroom Setup Guide 
 
+You can download my screencast here: https://github.com/vuxcode/pr1-project-pokeballstore/blob/main/Visual%20studio%20code%20%2B%20Github.webm
 
 Hello and welcome!
 
