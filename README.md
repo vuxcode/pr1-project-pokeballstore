@@ -47,3 +47,8 @@ Handling synonyms and saving data
 Import and export of word lists
 
 *For now, I’m just happy that it finally runs without (to much) errors and does most of the things i want.*
+
+
+## Side project
+
+I made a guide 
