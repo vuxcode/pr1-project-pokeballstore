@@ -42,7 +42,7 @@ function listWords() { // this will list all words that have been added to the g
     var listText = "Glossary:\n\n"; // Creating a new var "listText" where the list will be formated. do i need to put this at the top of the program?
       for (var i = 0; i < glossary.length; i++) { // The index "i" starts at 0 (Lesson 07 - Loops).
 // i++ makes it increase by 1 each time, so the loop continues until all words are listed.
-    listText += (i + 1) + ". " + glossary[i].swedish + " → " + glossary[i].english + "\n"; // Now we make a list by adding one word at a time.
+    listText += (i + 1) + ". " + glossary[i].swedish + " → " + glossary[i].english + "\n"; // Now we make a list by adding one word at a time. The "(i +1)" make it start the count from 1 instead of 0
 // "+=" means we keep what we already have and add more on the next line using "\n".
 // On the left side is the Swedish word and on the right side the English word. We will see this in the prompt box.
  
