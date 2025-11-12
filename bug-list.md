@@ -2,6 +2,6 @@
 
 > Make a list of the things that don't work as expected. Keep a list of things that you have fixed and try to document how you solved them.
 
-1. Problem: *Describe your problem here* 
+1. Problem: Make a list that the user can read. I made it first with documentwrite and it created all sorts of problem
+Now i try to do it in a prompt instead!
 
-test 2

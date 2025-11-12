@@ -33,14 +33,13 @@ function addWord() {  // function is a block of code that performs a specific ta
 }
 
 function listWords() { // this will list all words that have been added to the glossary on the page in html via document write. for now . // it will be number 2 in the "prompt menu"
-  document.write("Glossary"); // document.write writes directly to the html document. and there i can show all words that have been added.
-  if (glossary.length === 0) { // if there are no words in the glossary = "=== 0" 
-    document.write("No words added yet."); // This will be written on the page.
-  } else { // else if there are words in the glossary it will write all words that have been added.
-    document.write(glossary); // This is not working. VS code gives me some autofill that i dont understand. Collin said i should use buttons lesson and implement 
+// lets try to make the wordslist in a prompt.
 
-    
-  }
+  if (glossary.length === 0) { // if there are no words in the glossary = "=== 0" 
+   alert("No words added yet."); // This will be written in a prompt
+   return; // Stop the function and start over instead of using else
+  } 
+  
 }
 
 function startQuiz() { // this will start a quiz where the user can test their knowledge of the words in the glossary. // it will be number 3 in the "prompt menu"
