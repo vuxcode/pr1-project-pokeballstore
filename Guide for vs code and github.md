@@ -152,3 +152,9 @@ Source Control → click + to stage changes.
 Write a commit message → click Commit.
 
 Then click Sync Changes (🔁) to upload to GitHub.
+
+
+Good luck with you project. 
+If you have any problems with the repo talk to Collin. If you want help with Visualstudio and github you can write to me on teams! 
+
+Have a good day! (ctrl + s - commit - sync)
