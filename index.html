@@ -33,13 +33,15 @@ function addWord() {  // function is a block of code that performs a specific ta
 }
 
 function listWords() { // this will list all words that have been added to the glossary on the page in html via document write. for now . // it will be number 2 in the "prompt menu"
-// lets try to make the wordslist in a prompt.
+// lets try to make the wordslist in a prompt. If i direct towards glossary it creates just a prompt with object object. Need to "format the var glossary"
 
   if (glossary.length === 0) { // if there are no words in the glossary = "=== 0" 
    alert("No words added yet."); // This will be written in a prompt
    return; // Stop the function and start over instead of using else
   } 
   
+   // Show the list inside a PROMPT
+  prompt(listText + "\n(Press OK to return to menu)"); // List \n creates a new line Ok to return is the message.
 }
 
 function startQuiz() { // this will start a quiz where the user can test their knowledge of the words in the glossary. // it will be number 3 in the "prompt menu"
