@@ -136,5 +136,35 @@ Write a commit message → click Commit.
 
 Then click Sync Changes (🔁) to upload to GitHub.
 
+Now lets sync!
+ It is not working... lets debug
+
+ Chat gpt tells me to delete the folder we created and go back to step 3 and clone the school repo. 
 
 
+
+ Delete your local classroom folder
+Close VS Code. In your files, delete the local folder pr1-project-pokeballstore (just the local copy).
+
+Re-clone the Classroom repo
+
+Open VS Code → Ctrl+Shift+P → Git: Clone
+
+Paste your Classroom URL:
+
+
+Choose a location → when prompted, click Open.
+
+Put your files back in
+Copy your project files into this cloned folder.
+⚠️ Do not copy any hidden .git from anywhere—just your code/files.
+
+Commit
+Open Source Control (branch icon) → click + (Stage All) → write a message “Initial upload” → Commit.
+
+Sync (upload)
+Click Sync Changes (⇅) or Push.
+If VS Code asks to “Publish / set upstream”, click Yes.
+
+Verify
+Refresh the repo page on GitHub (the Classroom one). You should see your commit.
