@@ -25,6 +25,8 @@ See feedback instantly: “Correct!” or the right answer
 
 Simple pop-ups and alerts for interaction
 
+A list of the words
+
 Keeps running in a small loop until you choose to quit
 
 It’s built only with the basics: prompts for input, alerts for feedback, and text written directly to the page. It’s not pretty, but it works, almost.
@@ -35,7 +37,7 @@ It’s built only with the basics: prompts for input, alerts for feedback, and t
 
 
 ## Problems at the moment
-It can't display the wordlist.
+Being able to save the words
 
 
 ## Planned ideas

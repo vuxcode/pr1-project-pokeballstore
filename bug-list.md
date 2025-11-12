@@ -4,4 +4,5 @@
 
 1. Problem: Make a list that the user can read. I made it first with documentwrite and it created all sorts of problem
 Now i try to do it in a prompt instead!
+I made and array and displayed it with an prompt and now it is working!
 
