@@ -160,12 +160,11 @@ function storage() {
   } else if (choice === "3") {
     exportList(); // Don't know how to do this yet.
   } else if (choice === "4") {
-    listWord(); // my plan is add and delete list word here. But it is not working. actually breaks the program because it is inside a function. Sc
+    listWords(); // my plan is add and delete list word here. But it is not working. actually breaks the program because it is inside a function. Scoop?
   } else if (choice === "5") {
     return;
   } else {
     alert("Invalid choice."); // if the user enters something else than 1, 2, 3 or 4 this alert will pop up. and the program will go back to the main menu and the enterings made by the user is still there
-  return;
   }
 }
  // ==== Functions Storage Menu ====
@@ -181,7 +180,7 @@ function deleteList() {
 }
  // ==== Export ====
 function exportList() {
- var data = localStorage.getItem("glossary") // If I understand this, I need to make a temporary variable inside the function that will .getItem 
+ var data = localStorage.getItem("glossary"); // If I understand this, I need to make a temporary variable inside the function that will .getItem 
    if (data) {  // Check if there's actually data
     prompt("Copy this data: Ctrl+A -> Ctrl+C:", data);  // Show it in a prompt with the .copy I think it would automatically be in the clipboard. This I have no idea atm. 
   } else {
