@@ -16,3 +16,4 @@ I made and array and displayed it with an prompt and now it is working!
   
 5. The import function breaks the program. syntax error in the json. 
 <img src="import_bug.png" alt="Import_bug" width="300">
+localStorage.removeItem("glossary"); in console will clear the storage.
