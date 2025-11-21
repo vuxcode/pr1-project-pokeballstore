@@ -11,3 +11,5 @@ I made and array and displayed it with an prompt and now it is working!
 
 3. In my new submenu, I was supposed to go back to the main menu, but I accidentally set the boolean to exit the program instead.
  "Removed the boolean and added return;."
+
+ 4. Tried to add document.write to display "refresh page to start Glossyhelper" when quitting the program.
