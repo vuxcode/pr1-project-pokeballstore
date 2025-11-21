@@ -17,17 +17,17 @@ It’s not fancy or big, just something I’m creating to learn more about codin
 
 ## Features (so far)
 
-Add words in Swedish and English
+Add words in Swedish and English.
 
-Test yourself in both directions
+See the words lis.
 
-See feedback instantly: “Correct!” or the right answer
+Test yourself in both directions.
 
-Simple pop-ups and alerts for interaction
+See feedback instantly: “Correct!” or the right answer.
 
-A list of the words
+Simple pop-ups and alerts for interaction.
 
-Keeps running in a small loop until you choose to quit
+Keeps running in a small loop until you choose to quit.
 
 It’s built only with the basics: prompts for input, alerts for feedback, and text written directly to the page. It’s not pretty, but it works, almost.
 
@@ -35,24 +35,30 @@ It’s built only with the basics: prompts for input, alerts for feedback, and t
   <img src="main-menu.png" alt="Main menu" width="600">
 </p>
 
+## What I am corrently working on now. 
+
+Create a local storage with the added words list.
+
+I will add a locally stored words list to the menu.
+In the future, I might also add options to upload and download the words list.
+
+Everything will still be handled through a prompt.
+
+It would be good to be able to edit the words list, or at least delete it.
+If that isn’t possible, the user will have to open and edit the JSON file manually.
+
+This is based from a stack overflow thread : https://stackoverflow.com/questions/3357553/how-do-i-store-an-array-in-localstorage
 
 ## Problems at the moment
-Being able to save the words
+No problems at the moment!
 
 
 ## Planned ideas
 
-Cleaner layout and design
+Cleaner layout and design.
 
-Handling synonyms and saving data
+Handling synonyms and saving data.
 
-Import and export of word lists
+Import and export of word lists.
 
-add a section for statistics and progress
-
-*For now, I’m just happy that it finally runs without (to much) errors and does most of the things i want.*
-
-
-## Side project
-
-I created a step-by-step guide for implementing GitHub commits in Visual Studio Desktop.
+*For now, I’m just happy that it finally runs without errors and does most of the things i want.*
