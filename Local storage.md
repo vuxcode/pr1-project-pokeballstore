@@ -30,3 +30,8 @@ The localStorage.getItem is placed under the top variables so the program checks
  Now I will add .setItem at the end of the addWord function so words are saved both to the glossary (in memory live when program is running) and to localStorage (persistent storage offline). 
 
  What about exporting the list.
+
+ ## Phase 3
+
+ Omg, it is working. 
+ Now I want to be able to delete the list.
