@@ -15,22 +15,50 @@
 // ====== DATA ======
 var glossary = [];  // array of word objects [] brackets are empty and inside there the array will go.
 var playing = true; // Use of boolean to be able to quit the program. (actually i added this for the cause that it was part of the course, and i dont understand how i could use it in a better way)
+//-----------------------------------------------------------------------------------------------------------------
+
+
+// ====== MAIN MENU LOOP ======
+while (playing) { // pointing to the boolean variable set atop of the pogram under data. When changed to false the program will stop. Line 38 atm
+  var choice = prompt( // prompt box that will be the main menu of the program. \n is for a new line in the prompt box.
+    "Glossary Trainer\n" + // 
+    "1 = Add word\n" +
+    "2 = List words\n" +
+    "3 = Start quiz\n" +
+    "4 = Quit" // the user can choose what to do in the program by entering 1, 2, 3 or 4. At this stage, it is easy to add more options if needed.
+  );
+
+  if (choice === "1") { 
+    addWord(); // pointing to the function found under functions
+  } else if (choice === "2") {
+    listWords(); // pointing to the function listwords, this does not work yet. And i feel stuck. Also i dont know if document.write is the best way to show the words that have been added. But i dont want to dig to deep in to html.... 
+  } else if (choice === "3") {
+    startQuiz(); // pointing to the function startquiz, this does work. YEY!!
+  } else if (choice === "4") {
+    playing = false; // changes the boolean variable to false and stops the program.
+    alert("Goodbye!"); // alert box that says goodbye when the user quits the program.
+  } else {
+    alert("Invalid choice."); // if the user enters something else than 1, 2, 3 or 4 this alert will pop up. and the program will go back to the main menu and the enterings made by the user is still there
+  }
+}
+//-----------------------------------------------------------------------------------------------------------------
+
 
 // ====== FUNCTIONS ======
+
+//   ==== Add words ====
+
 function addWord() {  // function is a block of code that performs a specific task // Can we reuse functions? in this case addWord. // it will be number 1 in the "prompt menu"
   var swe = prompt("Enter a Swedish word:"); // add a word in Swedish first
-
-
   var eng = prompt("Enter English translation:"); // then add its English translation
-
-
-  // i dont know how to handle synonyms yet
-  // I Think i need to do an array somehow 
-   // if i press cancel it breaks the program...
   
   glossary.push({ swedish: swe, english: eng }); // When the user adds a word it goes to swedish or english push adds a new element to the end of an array. But collin dont want to call it element.. dont remember what he said.
   alert("Word added: " + swe + " -> " + eng); // Can i make symbols? insted instead of ->  use an arrow? or something else that suits better?
 }
+//-----------------------------------------------------------------------------------------------------------------
+
+
+//   ==== The Words List ====
 
 function listWords() { // this will list all words that have been added to the glossary on the page in html via document write. for now . // it will be number 2 in the "prompt menu"
 // lets try to make the wordslist in a prompt. If i direct towards glossary it creates just a prompt with object object. Need to "format the var glossary"
@@ -50,6 +78,10 @@ function listWords() { // this will list all words that have been added to the g
    // Show the list inside a PROMPT
   prompt(listText + "\n(Press OK to return to menu)"); // List \n creates a new line Ok to return is the message.
 }
+//-----------------------------------------------------------------------------------------------------------------
+
+
+//   ==== The Quiz ====
 
 function startQuiz() { // this will start a quiz where the user can test their knowledge of the words in the glossary. // it will be number 3 in the "prompt menu"
   if (glossary.length === 0) { // if there are no words in the glossary = "=== 0" 
@@ -98,30 +130,7 @@ function checkAnswer(answer, correctAnswers) { // This function checks if the us
     alert(" Wrong. Correct answer(s): " + correctAnswers.join(", ")); // The program will display the correct answer(s). But that is not working... Now it shows Glossary[object Object] on the screen (document write) and or the program is broken.,
   }
 }
-
-// ====== MAIN MENU LOOP ======
-while (playing) { // pointing to the boolean variable set atop of the pogram under data. When changed to false the program will stop. (line 113 atm)
-  var choice = prompt( // prompt box that will be the main menu of the program. \n is for a new line in the prompt box.
-    "Glossary Trainer\n" + // 
-    "1 = Add word\n" +
-    "2 = List words\n" +
-    "3 = Start quiz\n" +
-    "4 = Quit" // the user can choose what to do in the program by entering 1, 2, 3 or 4. At this stage, it is easy to add more options if needed.
-  );
-
-  if (choice === "1") { 
-    addWord(); // pointing to the function found under functions
-  } else if (choice === "2") {
-    listWords(); // pointing to the function listwords, this does not work yet. And i feel stuck. Also i dont know if document.write is the best way to show the words that have been added. But i dont want to dig to deep in to html.... 
-  } else if (choice === "3") {
-    startQuiz(); // pointing to the function startquiz, this does work. YEY!!
-  } else if (choice === "4") {
-    playing = false; // changes the boolean variable to false and stops the program.
-    alert("Goodbye!"); // alert box that says goodbye when the user quits the program.
-  } else {
-    alert("Invalid choice."); // if the user enters something else than 1, 2, 3 or 4 this alert will pop up. and the program will go back to the main menu and the enterings made by the user is still there
-  }
-}
+//-----------------------------------------------------------------------------------------------------------------
 
 
 
@@ -133,11 +142,12 @@ while (playing) { // pointing to the boolean variable set atop of the pogram und
 Notes will be put in readme
 ==============================
 
-test 1
+// i dont know how to handle synonyms yet
+  // I Think i need to do an array somehow 
+  // if i press cancel it breaks the program...
 
 ==============================
 Updates will be published on github
 ==============================
 
 -->
-
