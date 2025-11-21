@@ -142,8 +142,40 @@ function checkAnswer(answer, correctAnswers) { // This function checks if the us
 }
 //-----------------------------------------------------------------------------------------------------------------
 
+//   ==== Add and delete storage ====
+function storage() {
+  var choice = prompt( // prompt box that will be the main menu of the program. \n is for a new line in the prompt box.
+    "Storage menu\n" + // 
+    "1 = Import list\n" +
+    "2 = Delete list \n" +
+    "3 = export list\n" +
+    "4 = List words\n" + // 
+    "5 = Back to main menu" // the user can choose what to do in the program by entering 1, 2, 3 or 4. At this stage, it is easy to add more options if needed.
+  );
 
-
+  if (choice === "1") { 
+    importList(); // pointing to the function found under functions
+  } else if (choice === "2") {
+    deleteList(); // The function with ability to clear the local storage
+  } else if (choice === "3") {
+    exportList(); // Don't know how to do this yet.
+  } else if (choice === "4") {
+    listWord(); // my plan is add and delete list word here. But it is not working yes 
+  } else if (choice === "5") {
+    playing = false; // changes the boolean variable to false and stops the program.
+    alert("Goodbye!"); // alert box that says goodbye when the user quits the program.
+  } else {
+    alert("Invalid choice."); // if the user enters something else than 1, 2, 3 or 4 this alert will pop up. and the program will go back to the main menu and the enterings made by the user is still there
+  }
+}
+ // ==== Add and delete storage functions ====
+function deleteList() {
+  var confirm = prompt("Delete saved words? (yes/no)");
+  if (confirm === "yes") {
+    localStorage.removeItem("glossary");
+    alert("Saved words deleted!");
+  }
+}
 
 </script>
 
