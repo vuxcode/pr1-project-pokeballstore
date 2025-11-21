@@ -162,10 +162,10 @@ function storage() {
   } else if (choice === "4") {
     listWord(); // my plan is add and delete list word here. But it is not working yes 
   } else if (choice === "5") {
-    playing = false; // changes the boolean variable to false and stops the program.
-    alert("Goodbye!"); // alert box that says goodbye when the user quits the program.
+    return;
   } else {
     alert("Invalid choice."); // if the user enters something else than 1, 2, 3 or 4 this alert will pop up. and the program will go back to the main menu and the enterings made by the user is still there
+  return;
   }
 }
  // ==== Add and delete storage functions ====
