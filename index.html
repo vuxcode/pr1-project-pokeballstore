@@ -63,7 +63,7 @@ function addWord() {  // function is a block of code that performs a specific ta
   // Lets see if we can add the words to the .json
   glossary.push({ swedish: swe, english: eng }); // When the user adds a word it goes to swedish or english push adds a new element to the end of an array. But collin dont want to call it element.. dont remember what he said.
   alert("Word added: " + swe + " -> " + eng); // Can i make symbols? insted instead of ->  use an arrow? or something else that suits better?
-  
+   localStorage.setItem("glossary", JSON.stringify(glossary));
 }
 //-----------------------------------------------------------------------------------------------------------------
 
@@ -155,7 +155,9 @@ Notes will be put in readme
   // I dont know how to handle synonyms yet
   // but when I am inside the brackets I thought it could not get out to the rest of the program 
   // The fuction starts after the bracket - so "while (playing)" is outside the function?
-
+  // The semicolon ; marks the end of a statement in JavaScript. The colon : means "continues" or "this belongs to that"
+  // Will this be possible to run on github pages or does it need to be inside a same folder on the computer?
+  // But what if i want to open up the program with the list from last session 
 ==============================
 Updates will be published on github
 ==============================
