@@ -15,16 +15,15 @@
 // ====== DATA ======
 var glossary = [];  // array of word objects [] brackets are empty and inside there the array will go.
 var playing = true; // Use of boolean to be able to quit the program. (actually i added this for the cause that it was part of the course, and i dont understand how i could use it in a better way) Update: I grasp the bolean now!
+//-----------------------------------------------------------------------------------------------------------------
 
-// var storage = []; // Named it localStorage first but figured that it was a bad idé it is a built in object in JS. Do I even need a separate or should i reuse glossary?
-
-
-// ====== Local Storage ======
-// names[0] = prompt("New member name?"); // what is the zero? 
-// localStorage.setItem("names", JSON.stringify(names));
-// var storedNames = JSON.parse(localStorage.getItem("names"));
-
-
+// ====== Local storage ====== When program starts, check if there's saved data in localStorage
+if (localStorage.getItem("glossary") !== null) { // If "!== null" FALSE (nothing stored) -> skip this code, program continues with empty glossary
+  glossary = JSON.parse(localStorage.getItem("glossary")); // If "!==" TRUE (data exists) -> load saved words into glossary
+}
+if (localStorage.getItem("glossary") !== null) { // When the program start check If the .json have something stored if false (nothing stored), the function will not run (nothing will happen the program will continue) 
+  glossary = JSON.parse(localStorage.getItem("glossary")); // If "!== null" = true ( there is something stored), it will run the function and add words to the glossary variable
+}
 //-----------------------------------------------------------------------------------------------------------------
 
 
@@ -35,7 +34,7 @@ while (playing) { // pointing to the boolean variable set atop of the pogram und
     "1 = Add word\n" +
     "2 = List words\n" +
     "3 = Start quiz\n" +
-    "4 = Localy stored words list\n" + 
+    "4 = Add and delete words list\n" + 
     "5 = Quit" // the user can choose what to do in the program by entering 1, 2, 3 or 4. At this stage, it is easy to add more options if needed.
   );
 
@@ -104,9 +103,9 @@ function startQuiz() { // this will start a quiz where the user can test their k
 
   // choose how to play the quiz 
   var direction = prompt("Choose quiz direction:\n1 = Swedish → English\n2 = English → Swedish"); // \n is for a new line in the prompt box. 
-  if (direction !== "1" && direction !== "2") { 
-    alert("Invalid choice.");
-    return;
+  if (direction !== "1" && direction !== "2") { // Check if the user entered something OTHER than "1" or "2" (invalid choice)
+    alert("Invalid choice."); // Give the user an alert
+    return; // Give the user a new chance
   }
 
   // pick a random word
@@ -155,10 +154,9 @@ function checkAnswer(answer, correctAnswers) { // This function checks if the us
 Notes will be put in readme
 ==============================
 
-// i dont know how to handle synonyms yet
-  // I Think i need to do an array somehow 
-  // if i press cancel it breaks the program...
-
+  // I dont know how to handle synonyms yet
+  // but when I am inside the brackets I thought it could not get out to the rest of the program 
+  // The fuction starts after the bracket - so "while (playing)" is outside the function?
 
 ==============================
 Updates will be published on github

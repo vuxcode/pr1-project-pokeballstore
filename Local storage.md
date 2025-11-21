@@ -23,3 +23,5 @@ Upload a file ❌ (needs HTML input, not just prompts)
 
 
 ## Phase 2
+
+Will this be possible to run on github pages or does it need to be inside a same folder on the computer?
