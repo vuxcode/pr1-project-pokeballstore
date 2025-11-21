@@ -6,3 +6,4 @@
 Now i try to do it in a prompt instead!
 I made and array and displayed it with an prompt and now it is working!
 
+2. I added a fourth option to the menu (local storage). When I refresh the page, it is not there.. 
