@@ -17,7 +17,7 @@ var glossary = [];  // array of word objects [] brackets are empty and inside th
 var playing = true; // Use of boolean to be able to quit the program. (actually i added this for the cause that it was part of the course, and i dont understand how i could use it in a better way) Update: I grasp the bolean now!
 //-----------------------------------------------------------------------------------------------------------------
 
-// ====== Local storage ====== When program starts, check if there's saved data in localStorage
+// ====== Local storage ====== When program starts, check if there's saved data in localStorage .getitem
 if (localStorage.getItem("glossary") !== null) { // If "!== null" FALSE (nothing stored) -> skip this code, program continues with empty glossary
   glossary = JSON.parse(localStorage.getItem("glossary")); // If "!==" TRUE (data exists) -> load saved words into glossary
 }
@@ -60,9 +60,10 @@ while (playing) { // pointing to the boolean variable set atop of the pogram und
 function addWord() {  // function is a block of code that performs a specific task // Can we reuse functions? in this case addWord. // it will be number 1 in the "prompt menu"
   var swe = prompt("Enter a Swedish word:"); // add a word in Swedish first
   var eng = prompt("Enter English translation:"); // then add its English translation
-  
+  // Lets see if we can add the words to the .json
   glossary.push({ swedish: swe, english: eng }); // When the user adds a word it goes to swedish or english push adds a new element to the end of an array. But collin dont want to call it element.. dont remember what he said.
   alert("Word added: " + swe + " -> " + eng); // Can i make symbols? insted instead of ->  use an arrow? or something else that suits better?
+  
 }
 //-----------------------------------------------------------------------------------------------------------------
 

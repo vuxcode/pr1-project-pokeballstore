@@ -25,3 +25,6 @@ Upload a file ❌ (needs HTML input, not just prompts)
 ## Phase 2
 
 Will this be possible to run on github pages or does it need to be inside a same folder on the computer?
+
+The localStorage.getItem is placed under the top variables so the program checks for saved data before continuing.
+ Now I will add .setItem at the end of the addWord function so words are saved both to the glossary (in memory live when program is running) and to localStorage (persistent storage offline). 
