@@ -179,7 +179,7 @@ function deleteList() {
     return;
   }
 }
- // ==== export ====
+ // ==== Export ====
 function exportList() {
  var data = localStorage.getItem("glossary") // If I understand this, I need to make a temporary variable inside the function that will .getItem 
    if (data) {  // Check if there's actually data
@@ -190,7 +190,14 @@ function exportList() {
   }
 }    
 
-
+ // ==== Import ====
+function importList() {
+  var data = prompt("Paste your words here:");  // User pastes the text, but it is not sorted.
+   if (data) {
+    localStorage.setItem("glossary", data);  // Save it same way as in addWord
+    alert("List imported!");
+  }
+}
 
 </script>
 

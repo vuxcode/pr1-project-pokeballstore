@@ -44,3 +44,12 @@ https://stackoverflow.com/questions/67406568/get-a-localstorage-item-value-and-s
 
 And to be able to load it, I need to make a variable. This part I cannot wrap my head around.
 So I need to create a variable where I temporary store the .getItem 
+
+## Phase 5
+The export looks awfull, will try to fix this later. 
+Import words
+
+https://www.freecodecamp.org/news/use-local-storage-in-modern-applications/
+
+I Need to make it to a JSON.stringify and I have no idea how it will be sorted in English and Swedish  
+But as a begining i will do it similar as the start and just make a prompt and to localStorage.SetItem
