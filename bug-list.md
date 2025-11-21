@@ -13,3 +13,6 @@ I made and array and displayed it with an prompt and now it is working!
  "Removed the boolean and added return;."
 
  4. Tried to add document.write to display "refresh page to start Glossyhelper" when quitting the program.
+  
+5. The import function breaks the program. syntax error in the json. 
+<img src="import_bug.png" alt="Import_bug" width="300">
