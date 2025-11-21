@@ -14,7 +14,17 @@
 
 // ====== DATA ======
 var glossary = [];  // array of word objects [] brackets are empty and inside there the array will go.
-var playing = true; // Use of boolean to be able to quit the program. (actually i added this for the cause that it was part of the course, and i dont understand how i could use it in a better way)
+var playing = true; // Use of boolean to be able to quit the program. (actually i added this for the cause that it was part of the course, and i dont understand how i could use it in a better way) Update: I grasp the bolean now!
+
+// var storage = []; // Named it localStorage first but figured that it was a bad idé it is a built in object in JS. Do I even need a separate or should i reuse glossary?
+
+
+// ====== Local Storage ======
+// names[0] = prompt("New member name?"); // what is the zero? 
+// localStorage.setItem("names", JSON.stringify(names));
+// var storedNames = JSON.parse(localStorage.getItem("names"));
+
+
 //-----------------------------------------------------------------------------------------------------------------
 
 
@@ -36,7 +46,7 @@ while (playing) { // pointing to the boolean variable set atop of the pogram und
   } else if (choice === "3") {
     startQuiz(); // pointing to the function startquiz, this does work. YEY!!
   } else if (choice === "4") {
-    locallStorage(); // pointing to the locall storage, this does not work yet, and I am guessing atm. 
+    storage(); // pointing to the local storage function, this does not work yet, and I am guessing atm. Maybe it is unnecessary since all the words would be in listWords?
   } else if (choice === "5") {
     playing = false; // changes the boolean variable to false and stops the program.
     alert("Goodbye!"); // alert box that says goodbye when the user quits the program.
@@ -148,6 +158,7 @@ Notes will be put in readme
 // i dont know how to handle synonyms yet
   // I Think i need to do an array somehow 
   // if i press cancel it breaks the program...
+
 
 ==============================
 Updates will be published on github
