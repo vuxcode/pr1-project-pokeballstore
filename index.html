@@ -31,7 +31,7 @@ while (playing) { // pointing to the boolean variable set atop of the pogram und
     "1 = Add word\n" +
     "2 = List words\n" +
     "3 = Start quiz\n" +
-    "4 = Add and delete words list\n" + 
+    "4 = Add and delete words list\n" + // not working yet
     "5 = Quit" // the user can choose what to do in the program by entering 1, 2, 3 or 4. At this stage, it is easy to add more options if needed.
   );
 
@@ -42,7 +42,7 @@ while (playing) { // pointing to the boolean variable set atop of the pogram und
   } else if (choice === "3") {
     startQuiz(); // pointing to the function startquiz, this does work. YEY!!
   } else if (choice === "4") {
-    storage(); // pointing to the local storage function, this does not work yet, and I am guessing atm. Maybe it is unnecessary since all the words would be in listWords?
+    storage(); // my plan is add and delete words list here. But it is not working yes 
   } else if (choice === "5") {
     playing = false; // changes the boolean variable to false and stops the program.
     alert("Goodbye!"); // alert box that says goodbye when the user quits the program.
