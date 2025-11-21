@@ -21,9 +21,6 @@ var playing = true; // Use of boolean to be able to quit the program. (actually 
 if (localStorage.getItem("glossary") !== null) { // If "!== null" FALSE (nothing stored) -> skip this code, program continues with empty glossary
   glossary = JSON.parse(localStorage.getItem("glossary")); // If "!==" TRUE (data exists) -> load saved words into glossary
 }
-if (localStorage.getItem("glossary") !== null) { // When the program start check If the .json have something stored if false (nothing stored), the function will not run (nothing will happen the program will continue) 
-  glossary = JSON.parse(localStorage.getItem("glossary")); // If "!== null" = true ( there is something stored), it will run the function and add words to the glossary variable
-}
 //-----------------------------------------------------------------------------------------------------------------
 
 
