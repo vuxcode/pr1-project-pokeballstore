@@ -25,7 +25,8 @@ while (playing) { // pointing to the boolean variable set atop of the pogram und
     "1 = Add word\n" +
     "2 = List words\n" +
     "3 = Start quiz\n" +
-    "4 = Quit" // the user can choose what to do in the program by entering 1, 2, 3 or 4. At this stage, it is easy to add more options if needed.
+    "4= Locally stored words list\n" + 
+    "5= Quit" // the user can choose what to do in the program by entering 1, 2, 3 or 4. At this stage, it is easy to add more options if needed.
   );
 
   if (choice === "1") { 
@@ -34,7 +35,9 @@ while (playing) { // pointing to the boolean variable set atop of the pogram und
     listWords(); // pointing to the function listwords, this does not work yet. And i feel stuck. Also i dont know if document.write is the best way to show the words that have been added. But i dont want to dig to deep in to html.... 
   } else if (choice === "3") {
     startQuiz(); // pointing to the function startquiz, this does work. YEY!!
-  } else if (choice === "4") {
+    } else if (choice === "4") {
+    locallStorage(); // pointing to the locall storage, this does not work yet, and I am guessing atm. 
+  } else if (choice === "5") {
     playing = false; // changes the boolean variable to false and stops the program.
     alert("Goodbye!"); // alert box that says goodbye when the user quits the program.
   } else {
