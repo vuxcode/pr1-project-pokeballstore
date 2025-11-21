@@ -174,7 +174,7 @@ function deleteList() {
   var confirm = prompt("Delete saved words? (yes/no)");
   if (confirm === "yes") {
     localStorage.removeItem("glossary");
-    alert("Saved words deleted! You need to reload the page.");
+    alert("Saved words deleted!");
     alert("You need to reload the page!");
     return;
   }
@@ -198,6 +198,8 @@ function importList() {
     alert("List imported!");
   }
 }
+
+document.write("Refresh the page to start GlossyHelper")
 
 </script>
 
