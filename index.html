@@ -31,7 +31,7 @@ while (playing) { // pointing to the boolean variable set atop of the pogram und
     "1 = Add word\n" +
     "2 = List words\n" +
     "3 = Start quiz\n" +
-    "4 = Add and delete list word\n" + // not working yet
+    "4 = Storage menu\n" + // Became a whole submenu 
     "5 = Quit" // the user can choose what to do in the program by entering 1, 2, 3 or 4. At this stage, it is easy to add more options if needed.
   );
 
@@ -148,7 +148,7 @@ function storage() {
     "Storage menu\n" + // 
     "1 = Import list\n" +
     "2 = Delete list \n" +
-    "3 = export list\n" +
+    "3 = Export list\n" +
     "4 = List words\n" + // 
     "5 = Back to main menu" // the user can choose what to do in the program by entering 1, 2, 3 or 4. At this stage, it is easy to add more options if needed.
   );
@@ -173,7 +173,8 @@ function deleteList() {
   var confirm = prompt("Delete saved words? (yes/no)");
   if (confirm === "yes") {
     localStorage.removeItem("glossary");
-    alert("Saved words deleted!");
+    alert("Saved words deleted! You need to reload the page.");
+    alert("You need to reload the page!");
   }
 }
 
