@@ -28,3 +28,19 @@ https://stackoverflow.com/questions/7667958/clearing-localstorage-in-javascript
 `localStorage.clear();`  will clear everything.
 `localStorage.removeItem("name_of_localStorage_variable_to_remove");`
 I will build a whole submenu.
+
+## Phase 4
+
+Copy local storage
+I found .copy but it only seams to work in the console. 
+
+https://stackoverflow.com/questions/55067628/json-example-confusing-me-about-json-parse-json-stringify-localstorage-setit
+"Retrieving
+
+    text = localStorage.getItem("testJSON");
+        This line is retrieving the stored JSON string.
+"
+https://stackoverflow.com/questions/67406568/get-a-localstorage-item-value-and-set-it-as-a-variable
+
+And to be able to load it, I need to make a variable. This part I cannot wrap my head around.
+So I need to create a variable where I temporary store the .getItem 

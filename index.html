@@ -168,15 +168,29 @@ function storage() {
   return;
   }
 }
- // ==== Add and delete storage functions ====
+ // ==== Functions Storage Menu ====
+ // ==== Delete ====
 function deleteList() {
   var confirm = prompt("Delete saved words? (yes/no)");
   if (confirm === "yes") {
     localStorage.removeItem("glossary");
     alert("Saved words deleted! You need to reload the page.");
     alert("You need to reload the page!");
+    return;
   }
 }
+ // ==== export ====
+function exportList() {
+ var data = localStorage.getItem("glossary") // If I understand this, I need to make a temporary variable inside the function that will .getItem 
+   if (data) {  // Check if there's actually data
+    prompt("Copy this data: Ctrl+A -> Ctrl+C:", data);  // Show it in a prompt with the .copy I think it would automatically be in the clipboard. This I have no idea atm. 
+  } else {
+    alert("No data to export!");
+    return;
+  }
+}    
+
+
 
 </script>
 
