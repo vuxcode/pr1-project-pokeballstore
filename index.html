@@ -15,7 +15,7 @@
 
 // ====== DATA ======
 var glossary = [];  // array of word objects [] brackets are empty and inside there the array will go.
-var playing = true; // Use of boolean to be able to quit the program. (actually i added this for the cause that it was part of the course, and i dont understand how i could use it in a better way) Update: I grasp the bolean now!
+var playing = true; // Use of boolean to be able to quit the program. (actually I added this for the cause that it was part of the course, and I dont understand how I could use it in a better way) Update: I grasp the boolean now!
 //-----------------------------------------------------------------------------------------------------------------
 
 // ====== Local storage ====== When program starts, check if there's saved data in localStorage .getitem
@@ -26,7 +26,7 @@ if (localStorage.getItem("glossary") !== null) { // If "!== null" FALSE (nothing
 
 
 // ====== MAIN MENU LOOP ======
-while (playing) { // pointing to the boolean variable set atop of the pogram under data. When changed to false the program will stop. Line 38 atm
+while (playing) { // pointing to the boolean variable set atop of the program under data. When changed to false the program will stop. Line 38 atm
   var choice = prompt( // prompt box that will be the main menu of the program. \n is for a new line in the prompt box.
     "Glossary Trainer\n" + // 
     "1 = Add word\n" +
@@ -39,7 +39,7 @@ while (playing) { // pointing to the boolean variable set atop of the pogram und
   if (choice === "1") { 
     addWord(); // pointing to the function found under functions
   } else if (choice === "2") {
-    listWords(); // pointing to the function listwords, this does not work yet. And i feel stuck. Also i dont know if document.write is the best way to show the words that have been added. But i dont want to dig to deep in to html.... 
+    listWords(); // pointing to the function listWords, this does not work yet. And I feel stuck. Also I dont know if document.write is the best way to show the words that have been added. But I dont want to dig too deep into html.... 
   } else if (choice === "3") {
     startQuiz(); // pointing to the function startquiz, this does work. YEY!!
   } else if (choice === "4") {
@@ -63,8 +63,8 @@ function addWord() {  // function is a block of code that performs a specific ta
   var eng = prompt("Enter English translation:"); // then add its English translation
   // Lets see if we can add the words to the .json
   glossary.push({ swedish: swe, english: eng }); // When the user adds a word it goes to swedish or english push adds a new element to the end of an array. But collin dont want to call it element.. dont remember what he said.
-  alert("Word added: " + swe + " -> " + eng); // Can i make symbols? insted instead of ->  use an arrow? or something else that suits better?
-   localStorage.setItem("glossary", JSON.stringify(glossary));
+  alert("Word added: " + swe + " -> " + eng); // Can I make symbols? instead of ->  use an arrow? or something else that suits better?
+  localStorage.setItem("glossary", JSON.stringify(glossary));
 }
 //-----------------------------------------------------------------------------------------------------------------
 
@@ -72,13 +72,13 @@ function addWord() {  // function is a block of code that performs a specific ta
 //   ==== The Words List ====
 
 function listWords() { // this will list all words that have been added to the glossary on the page in html via document write. for now . // it will be number 2 in the "prompt menu"
-// lets try to make the wordslist in a prompt. If i direct towards glossary it creates just a prompt with object object. Need to "format the var glossary"
+// lets try to make the wordslist in a prompt. If I direct towards glossary it creates just a prompt with object object. Need to "format the var glossary"
 
   if (glossary.length === 0) { // if there are no words in the glossary = "=== 0" 
    alert("No words added yet."); // This will be written in a prompt
    return; // Stop the function and start over instead of using else
   } 
-    var listText = "Glossary:\n\n"; // Creating a new var "listText" where the list will be formated. do i need to put this at the top of the program?
+    var listText = "Glossary:\n\n"; // Creating a new var "listText" where the list will be formatted. do I need to put this at the top of the program?
       for (var i = 0; i < glossary.length; i++) { // The index "i" starts at 0 (Lesson 07 - Loops).
 // i++ makes it increase by 1 each time, so the loop continues until all words are listed.
     listText += (i + 1) + ". " + glossary[i].swedish + " → " + glossary[i].english + "\n"; // Now we make a list by adding one word at a time. The "(i +1)" make it start the count from 1 instead of 0
@@ -122,8 +122,8 @@ function startQuiz() { // this will start a quiz where the user can test their k
 
 function checkAnswer(answer, correctAnswers) { // This function checks if the user's answer is correct.
   if (!answer) {
-    alert("No answer given."); // If the user presses cancel or leves the prompt empty, this alert will pop up. 
-    return; // User will be returend to the "main menu".
+    alert("No answer given."); // If the user presses cancel or leaves the prompt empty, this alert will pop up. 
+    return; // User will be returned to the "main menu".
   }
 
   var lower = answer.toLowerCase();// toLowerCase() method converts a string to lowercase letters. 
@@ -131,7 +131,7 @@ function checkAnswer(answer, correctAnswers) { // This function checks if the us
 
   for (var i = 0; i < correctAnswers.length; i++) { 
     if (lower === correctAnswers[i].toLowerCase()) {
-      correct = true; // if the asumption above was wrong it changes to true.
+      correct = true; // if the assumption above was wrong it changes to true.
     }
   }
 
@@ -161,14 +161,18 @@ function storage() {
   } else if (choice === "3") {
     exportList(); // Don't know how to do this yet.
   } else if (choice === "4") {
-    listWords(); // my plan is add and delete list word here. But it is not working. actually breaks the program because it is inside a function. Scoop?
+    listWords(); // my plan is add and delete list word here. But it is not working. Actually breaks the program because it is inside a function. Scope?
   } else if (choice === "5") {
     return;
   } else {
     alert("Invalid choice."); // if the user enters something else than 1, 2, 3 or 4 this alert will pop up. and the program will go back to the main menu and the enterings made by the user is still there
   }
 }
+//-----------------------------------------------------------------------------------------------------------------
+
+
  // ==== Functions Storage Menu ====
+ 
  // ==== Delete ====
 function deleteList() {
   var confirm = prompt("Delete saved words? (yes/no)");
@@ -177,12 +181,62 @@ function deleteList() {
     alert("Saved words deleted!");
     alert("You need to reload the page!");
     return;
+  
   }
 }
+//-----------------------------------------------------------------------------------------------------------------
+
+ // ==== Import ====
+
+function importList() {  // Copied the addWord and wordsList function and will add split to make so the user can paste a block of words 
+  var data = prompt("Paste the words in order Swedish then English:\nOne space in between every word "); // paste text for example "trä wood vatten water"
+  
+  if (data) { // Check if user actually pasted something, otherwise the function will not run. Will it return to the menu, do I need to give invalid message or create a return?
+    var words = data.split(" "); // Split the text by spaces into an array of individual words ["trä", "wood", "vatten", "water"] (What about case sensitivity?) data.split(" ") - data is the variable, split is the function/method, and " " (the space) is the separator/parameter.
+ 
+    // Loop through the array, taking 2 words at a time
+    for (var i = 0; i < words.length; i += 2) { // i is the position/index, i += 2 skips by 2, words.length is total number of words. We start counting from zero, so position 0 is the 1st element, position 2 is the 3rd element
+      var swe = words[i];      // First word in the pair = Swedish 0 2 4 6 8 
+      var eng = words[i + 1];  // Second word in the pair = English 1 3 5 7 9 
+      glossary.push({ swedish: swe, english: eng }); // Push it to glossary same way as in addWord
+    }
+    
+    localStorage.setItem("glossary", JSON.stringify(glossary)); // Same as the addWord
+    alert("Words imported!"); // Will it return to the main menu? // If the user pastes three words it will probably break...
+  } // You don't understand how a car works just because you can drive a car.
+}
+//-----------------------------------------------------------------------------------------------------------------
+
+
+   //ar listText = "Glossary:\n\n"; // Creating a new var "listText" where the list will be formatted. do I need to put this at the top of the program?
+     //or (var i = 0; i < glossary.length; i++) { // The index "i" starts at 0 (Lesson 07 - Loops).
+// i++ makes it increase by 1 each time, so the loop continues until all words are listed.
+   //istText += (i + 1) + ". " + glossary[i].swedish + " → " + glossary[i].english + "\n"; // Now we make a list by adding one word at a time. The "(i +1)" make it start the count from 1 instead of 0
+// "+=" means we keep what we already have and add more on the next line using "\n".
+// On the left side is the Swedish word and on the right side the English word. We will see this in the prompt box.
+
+ //var swe = prompt("Enter a Swedish word:"); // add a word in Swedish first
+ //var eng = prompt("Enter English translation:"); // then add its English translation
+  // Lets see if we can add the words to the .json
+ // glossary.push({ swedish: swe, english: eng }); // When the user adds a word it goes to swedish or english push adds a new element to the end of an array. But collin dont want to call it element.. dont remember what he said.
+  //alert("Word added: " + swe + " -> " + eng); // Can I make symbols? instead of ->  use an arrow? or something else that suits better? 
+   //localStorage.setItem("glossary", JSON.stringify(glossary));
+
+
+
+  // ==== Import ====
+//function importList() {
+  //var data = prompt("Paste your words here:");  // User pastes the text, but it is not sorted.
+   //if (data) {
+    //localStorage.setItem("glossary", data);  // Save it same way as in addWord
+    //alert("List imported!");
+  
+
+
  // ==== Export ====
 function exportList() {
- var data = localStorage.getItem("glossary"); // If I understand this, I need to make a temporary variable inside the function that will .getItem 
-   if (data) {  // Check if there's actually data
+  var data = localStorage.getItem("glossary"); // If I understand this, I need to make a temporary variable inside the function that will .getItem 
+  if (data) {  // Check if there's actually data
     prompt("Copy this data: Ctrl+A -> Ctrl+C:", data);  // Show it in a prompt with the .copy I think it would automatically be in the clipboard. This I have no idea atm. 
   } else {
     alert("No data to export!");
@@ -190,14 +244,6 @@ function exportList() {
   }
 }    
 
- // ==== Import ====
-function importList() {
-  var data = prompt("Paste your words here:");  // User pastes the text, but it is not sorted.
-   if (data) {
-    localStorage.setItem("glossary", data);  // Save it same way as in addWord
-    alert("List imported!");
-  }
-}
 
 
 
@@ -210,10 +256,10 @@ Notes will be put in readme
 
   // I dont know how to handle synonyms yet. If I add, will I need to redo everything?
   // but when I am inside the brackets I thought it could not get out to the rest of the program 
-  // The fuction starts after the bracket - so "while (playing)" is outside the function?
+  // The function starts after the bracket - so "while (playing)" is outside the function?
   // The semicolon ; marks the end of a statement in JavaScript. The colon : means "continues" or "this belongs to that"
   // Will this be possible to run on github pages or does it need to be inside a same folder on the computer?
-  // But what if i want to open up the program with the list from last session 
+  // But what if I want to open up the program with the list from last session 
 ==============================
 Updates will be published on github
 ==============================

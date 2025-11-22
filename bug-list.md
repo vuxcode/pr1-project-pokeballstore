@@ -17,3 +17,6 @@ I made and array and displayed it with an prompt and now it is working!
 5. The import function breaks the program. syntax error in the json. 
 <img src="import_bug.png" alt="Import_bug" width="300">
 localStorage.removeItem("glossary"); in console will clear the storage.
+
+Maybe I need to convert the input using JSON.stringify. But also the words need to be added to var eng and var swe.
+It would be nice if it could happen automatically; otherwise, it would just be the same as the addWord function.
