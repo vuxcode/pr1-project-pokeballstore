@@ -210,19 +210,36 @@ function importList() {  // Copied the addWord and wordsList function and will a
 
  // ==== Export ==== 
 function exportList() {
-  var data = localStorage.getItem("glossary"); // If I understand this, I need to make a temporary variable inside the function that will .getItem 
-  var parsed = JSON.parse(data) // test to parse first before printing 
-  if (data) {  // Check if there's actually data
-    prompt("Copy this data: Ctrl+A -> Ctrl+C:", data);  // Show it in a prompt with the .copy I think it would automatically be in the clipboard. This I have no idea atm. 
-  } else {
-    alert("No data to export!");
-    return;
-  }
+  if (glossary.length === 0) { // If empry 
+    alert("No words to export") // Alert the user with this meesage
+    return; // Then return 
 }    
 
+var exportText = ""; // same as list text but diffent name for debugging and no message to the user
+
+for (var i = 0; i < glossary.length; i++) {  //Part 1: var i = 0 (Initialization) Start counting at position 0, Part 2: i < glossary.length (Condition) Keep looping WHILE i is less than the total number of words, i < glossary.length (Condition) "Keep looping WHILE i is less than the total number of words"
+
+  exportText += + glossary[i].swedish + "  " + glossary[i].english + ; // we can skipp the "index 0 -> 1 fix"
+}
 
 
+//function listWords() { // this will list all words that have been added to the glossary on the page in html via document write. for now . // it will be number 2 in the "prompt menu"
+// lets try to make the wordslist in a prompt. If I direct towards glossary it creates just a prompt with object object. Need to "format the var glossary"
 
+  //if (glossary.length === 0) { // if there are no words in the glossary = "=== 0" 
+   //alert("No words added yet."); // This will be written in a prompt
+   //return; // Stop the function and start over instead of using else
+  //} 
+    //var listText = "Glossary:\n\n"; // Creating a new var "listText" where the list will be formatted. do I need to put this at the top of the program?
+      //for (var i = 0; i < glossary.length; i++) { // The index "i" starts at 0 (Lesson 07 - Loops).
+// i++ makes it increase by 1 each time, so the loop continues until all words are listed.
+    //listText += (i + 1) + ". " + glossary[i].swedish + " → " + glossary[i].english + "\n"; // Now we make a list by adding one word at a time. The "(i +1)" make it start the count from 1 instead of 0
+// "+=" means we keep what we already have and add more on the next line using "\n".
+// On the left side is the Swedish word and on the right side the English word. We will see this in the prompt box.
+ 
+//  }
+  // // Show the list inside a PROMPT
+  //prompt(listText + "\n(Press OK to return to menu)"); // List \n creates a new line Ok to return is the message.
 
 
 // 
