@@ -59,6 +59,6 @@ Cleaner layout and design.
 
 Handling synonyms and saving data.
 
-Import and export of word lists.
+Quiz result to the user
 
 *For now, I’m just happy that it finally runs without errors and does most of the things i want.*

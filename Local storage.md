@@ -98,3 +98,4 @@ Add toLowerCase
 
 # Phase 7
 
+Remove the .JSON part from the export. 
