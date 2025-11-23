@@ -91,3 +91,10 @@ for (var i = 0; i < arr.length; i += 2) {
     var title = arr[i];
     var len = arr[i+1];
 }
+
+# Phase 6
+
+Add toLowerCase
+
+# Phase 7
+

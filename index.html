@@ -26,7 +26,7 @@ if (localStorage.getItem("glossary") !== null) { // If "!== null" FALSE (nothing
 
 
 // ====== MAIN MENU LOOP ======
-while (playing) { // pointing to the boolean variable set atop of the program under data. When changed to false the program will stop. Line 38 atm
+while (playing) { // Calling to the boolean variable set atop of the program under data. When changed to false the program will stop. Line 38 atm
   var choice = prompt( // prompt box that will be the main menu of the program. \n is for a new line in the prompt box.
     "Glossary Trainer\n" + // 
     "1 = Add word\n" +
@@ -37,11 +37,11 @@ while (playing) { // pointing to the boolean variable set atop of the program un
   );
 
   if (choice === "1") { 
-    addWord(); // pointing to the function found under functions
+    addWord(); // Calling to the function found under functions
   } else if (choice === "2") {
-    listWords(); // pointing to the function listWords, this does not work yet. And I feel stuck. Also I dont know if document.write is the best way to show the words that have been added. But I dont want to dig too deep into html.... 
+    listWords(); // Calling to the function listWords, 
   } else if (choice === "3") {
-    startQuiz(); // pointing to the function startquiz, this does work. YEY!!
+    startQuiz(); // Calling to the function startquiz, this does work. YEY!!
   } else if (choice === "4") {
     storage(); // my plan is add and delete list word here. But it is not working yes 
   } else if (choice === "5") {
@@ -63,7 +63,7 @@ function addWord() {  // function is a block of code that performs a specific ta
   var swe = prompt("Enter a Swedish word:"); // add a word in Swedish first
   var eng = prompt("Enter English translation:"); // then add its English translation
   // Lets see if we can add the words to the .json
-  glossary.push({ swedish: swe, english: eng }); // When the user adds a word it goes to swedish or english push adds a new element to the end of an array. But collin dont want to call it element.. dont remember what he said.
+  glossary.push({ swedish: swe.toLowerCase(), english: eng.toLowerCase() }); // When the user adds a word it goes to swedish or english push adds a new element to the end of an array. But collin dont want to call it element.. dont remember what he said.
   alert("Word added: " + swe + " -> " + eng); // Can I make symbols? instead of ->  use an arrow? or something else that suits better?
   localStorage.setItem("glossary", JSON.stringify(glossary));
 }
@@ -176,19 +176,18 @@ function storage() {
  
  // ==== Delete ====
 function deleteList() {
-  var confirm = prompt("Delete saved words? (yes/no)");
-  if (confirm === "yes") {
-    localStorage.removeItem("glossary");
-    alert("Saved words deleted!");
+  var confirm = prompt("Delete saved words? (yes/no)"); // Creates a variable and a prompt to the user
+  if (confirm.toLowerCase() === "yes") { // when user type yes 
+    localStorage.removeItem("glossary"); // .removeItem is called that will remove the local storage
+    alert("Saved words deleted!"); 
     alert("You need to reload the page!");
-    return;
+    return; // Is this a pure function?
   
   }
 }
 //-----------------------------------------------------------------------------------------------------------------
 
  // ==== Import ====
-
 function importList() {  // Copied the addWord and wordsList function and will add split to make so the user can paste a block of words 
   var data = prompt("Paste the words in order Swedish then English:\nOne space in between every word "); // paste text for example "trä wood vatten water"
   
@@ -197,8 +196,9 @@ function importList() {  // Copied the addWord and wordsList function and will a
  
     // Loop through the array, taking 2 words at a time
     for (var i = 0; i < words.length; i += 2) { // i is the position/index, i += 2 skips by 2, words.length is total number of words. We start counting from zero, so position 0 is the 1st element, position 2 is the 3rd element
-      var swe = words[i];      // First word in the pair = Swedish 0 2 4 6 8 
-      var eng = words[i + 1];  // Second word in the pair = English 1 3 5 7 9 
+    // a for is a 
+      var swe = words[i].toLowerCase();      // First word in the pair = Swedish 0 2 4 6 8 
+      var eng = words[i + 1].toLowerCase();  // Second word in the pair = English 1 3 5 7 9 
       glossary.push({ swedish: swe, english: eng }); // Push it to glossary same way as in addWord
     }
     
@@ -207,32 +207,6 @@ function importList() {  // Copied the addWord and wordsList function and will a
   } // You don't understand how a car works just because you can drive a car.
 }
 //-----------------------------------------------------------------------------------------------------------------
-
-
-   //ar listText = "Glossary:\n\n"; // Creating a new var "listText" where the list will be formatted. do I need to put this at the top of the program?
-     //or (var i = 0; i < glossary.length; i++) { // The index "i" starts at 0 (Lesson 07 - Loops).
-// i++ makes it increase by 1 each time, so the loop continues until all words are listed.
-   //istText += (i + 1) + ". " + glossary[i].swedish + " → " + glossary[i].english + "\n"; // Now we make a list by adding one word at a time. The "(i +1)" make it start the count from 1 instead of 0
-// "+=" means we keep what we already have and add more on the next line using "\n".
-// On the left side is the Swedish word and on the right side the English word. We will see this in the prompt box.
-
- //var swe = prompt("Enter a Swedish word:"); // add a word in Swedish first
- //var eng = prompt("Enter English translation:"); // then add its English translation
-  // Lets see if we can add the words to the .json
- // glossary.push({ swedish: swe, english: eng }); // When the user adds a word it goes to swedish or english push adds a new element to the end of an array. But collin dont want to call it element.. dont remember what he said.
-  //alert("Word added: " + swe + " -> " + eng); // Can I make symbols? instead of ->  use an arrow? or something else that suits better? 
-   //localStorage.setItem("glossary", JSON.stringify(glossary));
-
-
-
-  // ==== Import ====
-//function importList() {
-  //var data = prompt("Paste your words here:");  // User pastes the text, but it is not sorted.
-   //if (data) {
-    //localStorage.setItem("glossary", data);  // Save it same way as in addWord
-    //alert("List imported!");
-  
-
 
  // ==== Export ====
 function exportList() {
@@ -244,7 +218,7 @@ function exportList() {
     return;
   }
 }    
-
+//-----------------------------------------------------------------------------------------------------------------
 
 
 
