@@ -99,3 +99,5 @@ Add toLowerCase
 # Phase 7
 
 Remove the .JSON part from the export. 
+Opposite of JSON.stringify is JSON.parse() as I use in the local storage function at the top of the program. 
+Or if i can export the glossary without the json conversation 

@@ -208,9 +208,10 @@ function importList() {  // Copied the addWord and wordsList function and will a
 }
 //-----------------------------------------------------------------------------------------------------------------
 
- // ==== Export ====
+ // ==== Export ==== 
 function exportList() {
   var data = localStorage.getItem("glossary"); // If I understand this, I need to make a temporary variable inside the function that will .getItem 
+  var parsed = JSON.parse(data) // test to parse first before printing 
   if (data) {  // Check if there's actually data
     prompt("Copy this data: Ctrl+A -> Ctrl+C:", data);  // Show it in a prompt with the .copy I think it would automatically be in the clipboard. This I have no idea atm. 
   } else {
@@ -218,6 +219,13 @@ function exportList() {
     return;
   }
 }    
+
+
+
+
+
+
+// 
 //-----------------------------------------------------------------------------------------------------------------
 
 
