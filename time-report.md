@@ -69,7 +69,7 @@
 - **Session time:** ~2 hours
 
 
-The first part is before GitHub and more of an estimate of the time, and like Beethoven says, "the music is between the notes
+
 --- 
 
 ## October 2025
@@ -126,7 +126,7 @@ The first part is before GitHub and more of an estimate of the time, and like Be
 - Planned next steps
 - **Session time:** ~1-2 hours
 
----
+--- The first part is before GitHub and more of an estimate of the time, and like Beethoven says, "the music is between the notes" ---
 
 ## November 2025
 
@@ -144,6 +144,13 @@ The first part is before GitHub and more of an estimate of the time, and like Be
 - Created array for wordslist
 - Updated bug tracking
 - **Session time:** ~5-6 hours
+
+### November 20, 2025 
+**Workshop at school**
+ - Talked with Collin about next phase
+ - Got an understanding of scope 
+ - Found a spark new for coding 
+- **Session time:** 1 hour
 
 ### November 21, 2025 (29 commits!)
 **Massive Update Day - Local Storage Phase**
