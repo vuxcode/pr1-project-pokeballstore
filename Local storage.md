@@ -132,29 +132,59 @@ The opposite of `JSON.stringify` is `JSON.parse()` as I use in the local storage
 Parse didn't solve it.
 
 Or if I can export the glossary without the JSON conversion.
- 
- // ==== Export ==== 
+
+### Export function code:
+```javascript
+// ==== Export ==== 
 function exportList() {
-  if (glossary.length === 0) { // If empry 
-    alert("No words to export") // Alert the user with this meesage
+  if (glossary.length === 0) { // If empty 
+    alert("No words to export") // Alert the user with this message
     return; // Then return 
 }    
 
-var exportText = ""; // same as list text but diffent name for debugging and no message to the user
+var exportText = ""; // Same as list text but different name for debugging and no message to the user
 
-for (var i = 0; i < glossary.length; i++) {  //Part 1: var i = 0 (Initialization) Start counting at position 0, Part 2: i < glossary.length (Condition) Keep looping WHILE i is less than the total number of words, i < glossary.length (Condition) "Keep looping WHILE i is less than the total number of words"
+for (var i = 0; i < glossary.length; i++) {  // Part 1: var i = 0 (Initialization) Start counting at position 0, Part 2: i < glossary.length (Condition) Keep looping WHILE i is less than the total number of words
 
-  exportText += + glossary[i].swedish + "  " + glossary[i].english + ; // we can skipp the "index 0 -> 1 fix"
+  exportText += glossary[i].swedish + "  " + glossary[i].english + "\n"; // We can skip the "index 0 -> 1 fix"
 }
+```
+
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for
 
-
-https://stackoverflow.com/questions/12809776/can-a-for-loop-increment-decrement-by-more-than-one // Can I use this to fix the bug when adding three words?
+https://stackoverflow.com/questions/12809776/can-a-for-loop-increment-decrement-by-more-than-one 
+// Can I use this to fix the bug when adding three words?
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
-Opposite of the split 
+
+Opposite of the split:
+```javascript
 console.log(elements.join(""));
 // Expected output: "FireAirWater"
-Will try and add a space. 
+```
+Will try and add a space.
 
-BIG UPDATE: 20, Export is broken... back to the bench... 
+**BIG UPDATE: 20, Export is broken... back to the bench...**
+
+My neighbour helped me and told me what my problem is:
+```javascript
+glossary.push({ swedish: swe.toLowerCase(), english: eng.toLowerCase() });
+```
+This is for adding to the list, not extracting from it. First I got the whole array but with the brackets and such.
+I tried copying from the add word function.
+Need to find a way to extract the information from within the array.
+
+https://stackoverflow.com/questions/19590865/from-an-array-of-objects-extract-value-of-a-property-as-array
+
+```javascript
+function getFields(input, field) {
+    var output = [];
+    for (var i=0; i < input.length ; ++i)
+        output.push(input[i][field]);
+    return output;
+}
+
+var result = getFields(objArray, "foo"); // returns [ 1, 3, 5 ]
+```
+
+If I do the `output.push` twice and after I need to use `.join`.
