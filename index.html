@@ -205,8 +205,8 @@ function importList() {  // Copied the addWord and wordsList function and will a
     localStorage.setItem("glossary", JSON.stringify(glossary)); // Same as the addWord
     alert("Words imported!"); // Will it return to the main menu? // If the user pastes three words it will probably break...
   } // You don't understand how a car works just because you can drive a car.
-}
-//-----------------------------------------------------------------------------------------------------------------
+}-
+//----------------------------------------------------------------------------------------------------------------
 
  // ==== Export ==== 
 function exportList() {
@@ -215,13 +215,32 @@ function exportList() {
     return; // Then return 
 }    
 
-var exportText = ""; // same as list text but diffent name for debugging and no message to the user
+var words = ""; // same as list text but diffent name for debugging and no message to the user
 
 for (var i = 0; i < glossary.length; i++) {  //Part 1: var i = 0 (Initialization) Start counting at position 0, Part 2: i < glossary.length (Condition) Keep looping WHILE i is less than the total number of words, i < glossary.length (Condition) "Keep looping WHILE i is less than the total number of words"
-
-  exportText += + glossary[i].swedish + "  " + glossary[i].english + ; // we can skipp the "index 0 -> 1 fix"
+glossary.push({ swedish: swe.toLowerCase(), english: eng.toLowerCase() }); // .toLowerCase, I think, can be removed. Here we call the two glossary array, I think something is wrong.
+}  
+  var data = words.join(" "); // Join the words from the two arrays. We will see if it works to add a space in between the "". Var data will call var words and add the .join method before it is in var data
+  prompt("Copy this data: Ctrl+A -> Ctrl+C:", data); // The prompt call data
 }
+//----------------------------------------------------------------------------------------------------------------
 
+
+//exportText += + glossary[i].swedish + "  " + glossary[i].english + ; // we can skipp the "index 0 -> 1 fix"
+
+
+
+
+
+//   ==== Add words ====
+
+//function addWord() {  // function is a block of code that performs a specific task // Can we reuse functions? in this case addWord. // it will be number 1 in the "prompt menu"
+  //var swe = prompt("Enter a Swedish word:"); // add a word in Swedish first
+  //var eng = prompt("Enter English translation:"); // then add its English translation
+  // Lets see if we can add the words to the .json
+  //glossary.push({ swedish: swe.toLowerCase(), english: eng.toLowerCase() }); // When the user adds a word it goes to swedish or english push adds a new element to the end of an array. But collin dont want to call it element.. dont remember what he said.
+  //alert("Word added: " + swe + " -> " + eng); // Can I make symbols? instead of ->  use an arrow? or something else that suits better?
+  //localStorage.setItem("glossary", JSON.stringify(glossary));
 
 //function listWords() { // this will list all words that have been added to the glossary on the page in html via document write. for now . // it will be number 2 in the "prompt menu"
 // lets try to make the wordslist in a prompt. If I direct towards glossary it creates just a prompt with object object. Need to "format the var glossary"
