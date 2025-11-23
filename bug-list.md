@@ -51,6 +51,8 @@
 ---
 
 ## 7. Export displays JSON symbols
-**Issue:** Fix the export to not print JSON symbols. Parse didn't solve it.
+**Issue:** Fix the export to not print JSON symbols. Parse didn't solve it. 
+
+<img src="export_bug.png" alt="Import bug screenshot" width="300">
 
 **Status:** Bug identified, solution pending.
