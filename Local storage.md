@@ -129,4 +129,6 @@ Remove the JSON part from the export.
 
 The opposite of `JSON.stringify` is `JSON.parse()` as I use in the local storage function at the top of the program.
 
+Parse didn't solve it.
+
 Or if I can export the glossary without the JSON conversion.
