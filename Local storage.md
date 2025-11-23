@@ -188,3 +188,4 @@ var result = getFields(objArray, "foo"); // returns [ 1, 3, 5 ]
 ```
 
 If I do the `output.push` twice and after I need to use `.join`.
+Still broken... 
