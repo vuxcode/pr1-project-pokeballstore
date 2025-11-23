@@ -189,3 +189,9 @@ var result = getFields(objArray, "foo"); // returns [ 1, 3, 5 ]
 
 If I do the `output.push` twice and after I need to use `.join`.
 Still broken... 
+FIXED!
+
+## Phase 8 
+
+How should you return in the menu after adding words an so on. 
+Fix the three word bug.
