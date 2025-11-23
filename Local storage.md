@@ -156,3 +156,5 @@ Opposite of the split
 console.log(elements.join(""));
 // Expected output: "FireAirWater"
 Will try and add a space. 
+
+BIG UPDATE: 20, Export is broken... back to the bench... 
