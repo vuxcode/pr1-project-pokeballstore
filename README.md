@@ -92,6 +92,7 @@ It's built only with the basics: prompts for input, alerts for feedback, and loc
 - Export to actual file download instead of just copy/paste
 - Import a actual file and the program can format the words
 - A interface instead of prompts. Like a terminal?
+- Change the language 
 
 *For now, I'm just happy that it finally runs without errors and does most of the things I want.*
 
