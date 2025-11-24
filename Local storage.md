@@ -198,3 +198,19 @@ Fix the three word bug.
 
 https://www.youtube.com/watch?v=JfHEtou8qb4
 
+Lesson 05 - Operators
+
+variable % 2 == 0 
+
+A: This would check if the variable is an EVEN number. The result would be either true or false.
+https://medium.com/@stitans28/javascript-remainder-operator-101-794f4df28c87
+<img src="images/remainder_function.png" alt="Export bug screenshot" width="300">
+How to add this to the import function? If it starts to count from 0, is 1 even?
+
+function evenInput(num) {
+   if  num % 2 === 0{
+    console.log("valid input!");
+   } else {
+   alert("Please enter an even number of words.");
+}
+   }
