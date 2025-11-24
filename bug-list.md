@@ -33,7 +33,7 @@
 ## 5. Import function breaks the program
 **Issue:** The import function breaks the program with a syntax error in the JSON.
 
-<img src="import_bug.png" alt="Import bug screenshot" width="300">
+<img src="images/import_bug.png" alt="Import bug screenshot" width="300">
 
 **Workaround:** `localStorage.removeItem("glossary");` in console will clear the storage.
 
@@ -53,7 +53,7 @@
 ## 7. Export displays JSON symbols
 **Issue:** Fix the export to not print JSON symbols. Parse didn't solve it.
 
-<img src="export_bug.png" alt="Export bug screenshot" width="300">
-<img src="export_bug_code.png" alt="Export bug screenshot" width="300">
+<img src="images/export_bug.png" alt="Export bug screenshot" width="300">
+<img src="images/export_bug_code.png" alt="Export bug screenshot" width="300">
 
 **Status:** Bug identified. In the console you can see that the page only finds `exportList` in storage on line 163. That is the Menu. When looking through the code - was at line 208 after the curly bracket before the export function. Why doesn't VS Code give me a red line or something?

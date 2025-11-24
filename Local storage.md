@@ -195,3 +195,6 @@ FIXED!
 
 How should you return in the menu after adding words an so on. 
 Fix the three word bug.
+
+https://www.youtube.com/watch?v=JfHEtou8qb4
+

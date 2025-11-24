@@ -31,19 +31,19 @@ It's built only with the basics: prompts for input, alerts for feedback, and loc
 ## The Menus
 
 <p align="center">
-  <img src="menu1.png" alt="Main menu" width="600">
+  <img src="images/menu1.png" alt="Main menu" width="600">
 </p>
 
 <p align="center">
-  <img src="menu2.png" alt="Storage menu" width="600">
+  <img src="images/menu2.png" alt="Storage menu" width="600">
 </p>
 
 <p align="center">
-  <img src="menu3.png" alt="Quiz menu" width="600">
+  <img src="images/menu3.png" alt="Quiz menu" width="600">
 </p>
 
 <p align="center">
-  <img src="menu4.png" alt="Words list" width="600">
+  <img src="images/menu4.png" alt="Words list" width="600">
 </p>
 
 ---
