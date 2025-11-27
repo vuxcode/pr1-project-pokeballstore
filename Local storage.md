@@ -247,3 +247,5 @@ function importList() {  // Copied the addWord and wordsList function and will a
     // I WOULD
  
     // Loop through the array, taking 2 words at a time
+
+https://stackoverflow.com/questions/3212477/can-you-write-nested-functions-in-javascript
