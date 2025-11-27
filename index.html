@@ -16,6 +16,7 @@
 // ====== DATA ======
 var glossary = [];  // array of word objects [] brackets are empty and inside there the array will go.
 var playing = true; // Use of boolean to be able to quit the program. (actually I added this for the cause that it was part of the course, and I dont understand how I could use it in a better way) Update: I grasp the boolean now!
+var number = false;
 //-----------------------------------------------------------------------------------------------------------------
 
 // ====== Local storage ====== When program starts, check if there's saved data in localStorage .getitem
@@ -194,12 +195,15 @@ function evenInput(num) {
   if (num % 2 === 0) {
     // YOU ARE SAVING THE "TRUE" STATE INTO THE NUMBER VARIABLE
     number = true;
+    console.log(number + " - " + num);
+    return;
    }
    // WHAT SHOULD WE DO IF THE NUMBER IS ODD?
     else {
    alert("Please enter an even number of words.");
-}
+   return;
    }
+  }
 
 
  // ==== Import ====
@@ -208,6 +212,9 @@ function importList() {  // Copied the addWord and wordsList function and will a
   
   if (data) { // Check if user actually pasted something, otherwise the function will not run. Will it return to the menu, do I need to give invalid message or create a return?
     var words = data.split(" "); // Split the text by spaces into an array of individual words ["trä", "wood", "vatten", "water"] (What about case sensitivity?) data.split(" ") - data is the variable, split is the function/method, and " " (the space) is the separator/parameter.
+ 
+
+ 
     // COLIN: I THINK YOU WANT TO USE THE "evenInput" FUNCTION HERE FIRST!
     // THEN YOU WANT TO CHECK IF THE NUMBER IS TRUE OR FALSE
     // YOU COULD END THE FUNCTION HERE IF THE NUMBER IS NOT EVEN
@@ -215,7 +222,8 @@ function importList() {  // Copied the addWord and wordsList function and will a
     // I WOULD
  
     // Loop through the array, taking 2 words at a time
-
+  }
+}
 
 
 
