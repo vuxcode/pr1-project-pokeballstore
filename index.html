@@ -234,8 +234,8 @@ function evenInput(num) {
   var data = prompt("Paste the words in order Swedish then English:\nOne space in between every word "); // paste text for example "trä wood vatten water"
   
     if (!data) { // Check if user actually pasted something, otherwise the function will not run. Will it return to the menu, do I need to give invalid message or create a return?
-    alert ("No words added") // so the user know, maybe it was by intension 
-      return; // if the user didn't write anything we return (to correct menu I hope, need to check the rules for return) Update, 
+    alert ("No words added") // so the user know, maybe it was by intension update. the alert works and return works. nothing else...
+      return; // if the user didn't write anything we return (to correct menu I hope, need to check the rules for return) Update, it returns to the main menu how do i control this.
     
     }
       var words = data.split(" "); // Split the text by spaces into an array of individual words ["trä", "wood", "vatten", "water"] (What about case sensitivity?) data.split(" ") - data is the variable, split is the function/method, and " " (the space) is the separator/parameter.
