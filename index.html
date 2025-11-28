@@ -157,7 +157,7 @@ function storage() {
   );
 
   if (choice === "1") { 
-    importList(); // pointing to the function found under functions
+    importList(); // calling the function found under functions
   } else if (choice === "2") {
     deleteList(); // The function with ability to clear the local storage
   } else if (choice === "3") {
@@ -207,11 +207,11 @@ function evenInput(num) {
 
 
  // ==== Import ====
-function importList() {  // Copied the addWord and wordsList function and will add split to make so the user can paste a block of words 
-  var data = prompt("Paste the words in order Swedish then English:\nOne space in between every word "); // paste text for example "trä wood vatten water"
+//function importList() {  // Copied the addWord and wordsList function and will add split to make so the user can paste a block of words 
+  //var data = prompt("Paste the words in order Swedish then English:\nOne space in between every word "); // paste text for example "trä wood vatten water"
   
-  if (data) { // Check if user actually pasted something, otherwise the function will not run. Will it return to the menu, do I need to give invalid message or create a return?
-    var words = data.split(" "); // Split the text by spaces into an array of individual words ["trä", "wood", "vatten", "water"] (What about case sensitivity?) data.split(" ") - data is the variable, split is the function/method, and " " (the space) is the separator/parameter.
+  //if (data) { // Check if user actually pasted something, otherwise the function will not run. Will it return to the menu, do I need to give invalid message or create a return?
+    //var words = data.split(" "); // Split the text by spaces into an array of individual words ["trä", "wood", "vatten", "water"] (What about case sensitivity?) data.split(" ") - data is the variable, split is the function/method, and " " (the space) is the separator/parameter.
  
 
  
@@ -222,18 +222,29 @@ function importList() {  // Copied the addWord and wordsList function and will a
     // I WOULD
  
     // Loop through the array, taking 2 words at a time
-  }
-}
+ // }
+//}
 
 
 
  // ==== Import ====
-function importList() {  // Copied the addWord and wordsList function and will add split to make so the user can paste a block of words 
+ function importList(){ // Copied the addWord and wordsList function and will add split to make so the user can paste a block of words 
+  
+ while (true) {
   var data = prompt("Paste the words in order Swedish then English:\nOne space in between every word "); // paste text for example "trä wood vatten water"
   
-  if (data) { // Check if user actually pasted something, otherwise the function will not run. Will it return to the menu, do I need to give invalid message or create a return?
-    var words = data.split(" "); // Split the text by spaces into an array of individual words ["trä", "wood", "vatten", "water"] (What about case sensitivity?) data.split(" ") - data is the variable, split is the function/method, and " " (the space) is the separator/parameter.
- 
+    if (!data) { // Check if user actually pasted something, otherwise the function will not run. Will it return to the menu, do I need to give invalid message or create a return?
+    alert ("No words added") // so the user know, maybe it was by intension 
+      return; // if the user didn't write anything we return (to correct menu I hope, need to check the rules for return) Update, 
+    
+    }
+      var words = data.split(" "); // Split the text by spaces into an array of individual words ["trä", "wood", "vatten", "water"] (What about case sensitivity?) data.split(" ") - data is the variable, split is the function/method, and " " (the space) is the separator/parameter.
+    
+      if (evenInput(words.length)) { // the evenInput function check if words.length follow the rules in evenInput
+      break; // stop the while loop. If we are here it should work. 
+    }
+  }
+
     // Loop through the array, taking 2 words at a time
     for (var i = 0; i < words.length; i += 2) { // i is the position/index, i += 2 skips by 2, words.length is total number of words. We start counting from zero, so position 0 is the 1st element, position 2 is the 3rd element
     // a for is a 
@@ -245,7 +256,8 @@ function importList() {  // Copied the addWord and wordsList function and will a
     localStorage.setItem("glossary", JSON.stringify(glossary)); // Same as the addWord
     alert("Words imported!"); // Will it return to the main menu? // If the user pastes three words it will probably break...
   } // You don't understand how a car works just because you can drive a car.
-}
+
+ 
 //----------------------------------------------------------------------------------------------------------------
 
 // ==== Export ==== 
