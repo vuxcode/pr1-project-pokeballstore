@@ -96,6 +96,7 @@ function listWords() { // this will list all words that have been added to the g
 
 //   ==== The Quiz ====
 
+
 function startQuiz() { // this will start a quiz where the user can test their knowledge of the words in the glossary. // it will be number 3 in the "prompt menu"
   if (glossary.length === 0) { // if there are no words in the glossary = "=== 0" 
     alert("No words in glossary!"); // This alert will pop up.
@@ -114,11 +115,11 @@ function startQuiz() { // this will start a quiz where the user can test their k
   var word = glossary[index]; // glossary[index] picks the random word object from the array.
 
   if (direction === "1") { // If direction is "1", the quiz asks to translate from Swedish to English. If "2", the quiz asks to translate from English to Swedish.
-    var answer = prompt("Translate into English: " + word.swedish); //prompt box asking for the translation of the Swedish word.
-    checkAnswer(answer, word.english); // checkAnswer function checks if the answer is correct.
+    var answer = prompt("Translate into English: " + word.swedish); // prompt box asking for the translation of the Swedish word.
+    checkAnswer(answer, [word.english]); // FIX: word.english is wrapped in an array so checkAnswer always receives a list of correct answers. It needs to be an array not in a string.
   } else {
-    var answer = prompt("Translate into Swedish: " + word.english[0]); // If "2" is chosen by user, the quiz asks to translate from English to Swedish.
-    checkAnswer(answer, [word.swedish]); // checkAnswer function checks if the answer is correct. Same as above but checks the Swedish word list.
+    var answer = prompt("Translate into Swedish: " + word.english); // FIX: removed [0] so the full English word is shown.
+    checkAnswer(answer, [word.swedish]); // FIX: word.swedish is wrapped in an array to match how checkAnswer works. same.
   }
 }
 
@@ -128,22 +129,27 @@ function checkAnswer(answer, correctAnswers) { // This function checks if the us
     return; // User will be returned to the "main menu".
   }
 
-  var lower = answer.toLowerCase();// toLowerCase() method converts a string to lowercase letters. 
+  var lower = answer.toLowerCase(); // toLowerCase() method converts a string to lowercase letters. 
   var correct = false; // Assume the answer is incorrect first
 
-  for (var i = 0; i < correctAnswers.length; i++) { 
-    if (lower === correctAnswers[i].toLowerCase()) {
-      correct = true; // if the assumption above was wrong it changes to true.
+  for (var i = 0; i < correctAnswers.length; i++) { // Loop through all correct answers in the array.
+    if (lower === correctAnswers[i].toLowerCase()) { // Compare the user's answer with each correct answer.
+      correct = true; // If a match is found, change correct to true.
     }
   }
 
   if (correct) { // if it matches
     alert(" Correct!"); // The program will alert "Correct!" The User can press 
+    startQuiz(); // FIX: starts the quiz again so the user can continue playing. Need to check if i need to add a 
   } else {
-    alert(" Wrong. Correct answer(s): " + correctAnswers.join(", ")); // The program will display the correct answer(s). But that is not working... Now it shows Glossary[object Object] on the screen (document write) and or the program is broken.,
+    alert(" Wrong. Correct answer(s): " + correctAnswers.join(", ")); // An alert with correct answer
+    startQuiz(); // FIX: starts the quiz again after a wrong answer. Same again.
   }
 }
 //-----------------------------------------------------------------------------------------------------------------
+
+
+
 
 //   ==== Add and delete storage ====
 function storage() {
