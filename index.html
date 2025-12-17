@@ -58,16 +58,42 @@ document.write("Refresh the page to launch GlossyHelper");
 
 // ====== FUNCTIONS ======
 
-//   ==== Add words ====
+//   ==== Add words ==== 
+
+//   ==== Add words ==== 
+
+//   ==== Add words ==== 
 
 function addWord() {  // function is a block of code that performs a specific task // Can we reuse functions? in this case addWord. // it will be number 1 in the "prompt menu"
   var swe = prompt("Enter a Swedish word:"); // add a word in Swedish first
+  if (!swe) { // if the user presses cancel or leaves the input empty, stop adding words. When adding ! we connect the if statement with the Boolean value and check for empty input, which prevents the bug of empty word.
+    alert("No word added."); // feedback to the user
+    return; // return stops the function and goes back to the menu
+  }
+
   var eng = prompt("Enter English translation:"); // then add its English translation
+  if (!eng) { // if the user presses cancel or leaves the input empty, stop adding words
+    alert("No word added."); // feedback to the user
+    return; // return stops the function and goes back to the menu 
+  }
+
   // Lets see if we can add the words to the .json
-  glossary.push({ swedish: swe.toLowerCase(), english: eng.toLowerCase() }); // When the user adds a word it goes to swedish or english push adds a new element to the end of an array. But collin dont want to call it element.. dont remember what he said.
-  alert("Word added: " + swe + " -> " + eng); // Can I make symbols? instead of ->  use an arrow? or something else that suits better?
-  localStorage.setItem("glossary", JSON.stringify(glossary));
+  glossary.push({ swedish: swe.toLowerCase(), english: eng.toLowerCase() }); // push adds a new item (object) to the end of the glossary array
+  alert("Word added: " + swe + " -> " + eng); // outputs what was added
+  localStorage.setItem("glossary", JSON.stringify(glossary)); // saves the updated glossary in localStorage
+
+  // Ask the user if they want to add another word. Making the program better with code from the course.
+  // I think Collin doesn't like my copy-pasting, but hopefully I will learn enough to come back in the future
+  // and show something I built completely on my own.
+  var again = prompt("Add another word?\n1 = Yes\n2 = No"); // choose if the function should run again 
+  if (again == "1") { // if the user chooses yes
+    addWord(); // run the function again (this is only done if the user wants to continue) 
+  } else { // if the user chooses no (or anything else)
+    return; // stop and go back to the menu
+  }
 }
+
+
 //-----------------------------------------------------------------------------------------------------------------
 
 
