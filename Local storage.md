@@ -249,3 +249,9 @@ function importList() {  // Copied the addWord and wordsList function and will a
     // Loop through the array, taking 2 words at a time
 
 https://stackoverflow.com/questions/3212477/can-you-write-nested-functions-in-javascript
+
+## Phase 9
+
+End phase. Will just go to github and copy the old import function that works. And will leave it erup to the user to add correct amount of words. Sorry user, I tried my best.
+
+It works. I am kind of happy... 
