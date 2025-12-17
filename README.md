@@ -12,7 +12,7 @@ GlossyHelper is a small offline glossary app I'm building in JavaScript as part 
 
 ---
 
-## Features (so far)
+## Features
 
 Add words in Swedish and English  
 See the words list  
@@ -50,36 +50,26 @@ It's built only with the basics: prompts for input, alerts for feedback, and loc
 
 ## What I'm currently working on
 
-**Phase 8: Import function improvements**
-- Need to add a check so importing 3 words (odd number) doesn't break the program
-- Maybe alert the user if they paste an odd number of words
-
-**Next small steps:**
-- Clean up any remaining typos in comments and documentation
-
+I am done for now. Please test the program and read my documentation for a deeper understanding.
 
 ---
 
 ## Recent updates
 
-**Storage function** - Storage function - Added a new menu that includes functions to import, export, and delete the word list.
+Project Summary.
 
 
 ---
 
 ## Problems solved
 
-~~No way to save words~~ - Fixed with localStorage  
-~~Export shows JSON mess~~ - Fixed by extracting just the words  
-~~Import doesn't work with pasted text~~ - Fixed with split() and a loop  
-~~Case sensitivity issues~~ - Fixed with toLowerCase() everywhere  
-~~Syntax error breaking the program~~ - Fixed that `-` after the closing brace  
+See the bug-list.md
 
 ---
 
 ## Problems at the moment
 
-**Import odd-number bug** - If you paste 3 words (or any odd number), the import breaks because it tries to make pairs. Need to add a check for this.
+**Import odd-number bug** - If you paste 3 words (or any odd number), the import breaks because it tries to make pairs. Could not solve it. I will leave it like this.
 
 
 ---
@@ -116,7 +106,7 @@ It's built only with the basics: prompts for input, alerts for feedback, and loc
 
 **Loops** - for loops with three parts: initialization, condition, increment. Used them to process word pairs.
 
-**Modulo operator (%)** - Checking if numbers are even or odd. Perfect for validating word pairs.
+**Modulo operator (%)** - Checking if numbers are even or odd. **This was not implemented**
 
 **Syntax errors** - One wrong character can break everything. That `}-` taught me to look carefully.
 
@@ -172,6 +162,5 @@ This project taught me that programming is mostly about breaking big problems in
 
 The hardest part wasn't the coding - it was understanding what the code actually does. Comments helped. Stack Overflow helped. Talking with Collin helped. Using AI as a tutor helped. And just trying things until they worked definitely helped.
 
-My only problem is that it feels useless, I guess that is a swedish feeling. 
 
 ---
