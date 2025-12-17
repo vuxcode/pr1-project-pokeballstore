@@ -57,3 +57,17 @@
 <img src="images/export_bug_code.png" alt="Export bug screenshot" width="300">
 
 **Status:** Bug identified. In the console you can see that the page only finds `exportList` in storage on line 163. That is the Menu. When looking through the code - was at line 208 after the curly bracket before the export function. Why doesn't VS Code give me a red line or something?
+
+## 8. Import bug
+
+**Issue:**  When showing the program in school it felt like nothing was working. 
+The import function was never fixed with the "three word bug" 
+
+**Solution:** I decided to go to github and find a old commit with the first draft of the function that kind of works if the user makes correct input. 
+
+## 9. Quiz wrong answer and keep on playing bug
+
+**Issue:**  During the presentation i realized that the quiz was only desinged for correct answer and also i forgot to add startquiz after every answer. 
+
+
+**Solution:** change the correct answer to check the array not make correct answer a string. Add startquiz in the end of correct answer function.
