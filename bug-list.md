@@ -71,3 +71,11 @@ The import function was never fixed with the "three word bug"
 
 
 **Solution:** change the correct answer to check the array not make correct answer a string. Add startquiz in the end of correct answer function.
+
+## 9. Empty string when adding word.
+
+**Issue:**  If you push enter instead of writing a word it creates a empty line in the List words.
+
+<img src="images/add_word_bug.png" alt="Export bug screenshot" width="300">
+
+**Solution:** 
