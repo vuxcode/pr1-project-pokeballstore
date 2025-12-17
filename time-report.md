@@ -172,7 +172,7 @@
 - Document.write tests
 - **Session time:** ~3-4 hours (A friend who is developer stopped by to help)
 
-### November 23, 2025 (Today!)
+### November 23, 2025
 **Polish & Export Fixes**
 - Added .toLowerCase() to multiple functions
 - Export parse testing
@@ -185,5 +185,19 @@
 - Added bug screenshots
 - Created Phase 8 documentation
 - **Session time:** ~6-8 hours (including AI tutoring session to get a deeper undertanding of new stuff!)
+
+### I forgot the the time report
+- In the end i was in school and github was not working perfect 
+- And last week before presentation I did nothing due to focus on my English tests and lack of time.
+
+### December 15, 2025
+**Last update**
+- In the end i was in school and github was not working perfect 
+- The old import function is back
+- Add words is updated
+- Fixed "wrong answer" in the quiz
+- Updated all documentation 
+- Made a project summary
+ - **Session time:** 8 hours
 
 ---
